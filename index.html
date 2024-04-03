@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-device LLM Inference</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 95%;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+        textarea, input[type="button"] {
+            width: calc(100% - 40px);
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 16px;
+        }
+        textarea:focus, input[type="button"]:hover {
+            border-color: #007bff;
+            outline: none;
+        }
+        input[type="button"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+        input[type="button"]:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .profile-container {
+            width: 95%;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile-details {
+            text-align: left;
+        }
+        .profile-link {
+            background-color: #0077b5;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 8px;
+            display: inline-block;
+        }
+        .profile-link:hover {
+            background-color: #005a86;
+        }
+    </style>
+</head>
+<body>
+ <div class="profile-container">
+        <img src="XXXX.jpg" alt="Your Name" class="profile-image">
+        <div class="profile-details">
+            <h2>Toni Ramchandani</h2>
+            <p>Driven by Sports, Adventure, Technology & Innovations</p>
+            <a href="https://www.linkedin.com/in/toni-ramchandani/" class="profile-link">LinkedIn Profile</a>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Running Large Language Models On-Device with MediaPipe and TensorFlow Lite</h1>
+        <label for="input">Input:</label>
+        <textarea id="input" placeholder="Write python sample code"></textarea>
+        <input type="button" id="submit" value="Get Response" />
+        <label for="output">Result:</label>
+        <textarea id="output" placeholder="See the result here..."></textarea>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
